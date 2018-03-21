@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Modifica</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+      <ion-list-header>Modifica oggetto</ion-list-header>
+    <ion-item>
+      <ion-label floating>Cosa?</ion-label>
+      <ion-input type="text" [(ngModel)]="oggettoLocale.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>A chi?</ion-label>
+      <ion-input type="text" [(ngModel)]="oggettoLocale.aChi"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Quando?</ion-label>
+      <ion-datetime displayFormat="D/M/YYYY" [(ngModel)]="oggettoLocale.quando"></ion-datetime>
+    </ion-item>
+
+    <ion-item class="togglePrestato">
+      <ion-label>Prestato</ion-label>
+      <ion-toggle [(ngModel)]="oggettoLocale.ritornato"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <div class="containerImmagine" (click)="nuovaImmagine()">
+    <img src="{{oggettoLocale.fotografia}}" *ngIf="oggettoLocale.fotografia">
+  </div>""
+
+  <div>
+    <button ion-button full (click)="salvaModifiche()">Salva</button>
+  </div>
+
+</ion-content>

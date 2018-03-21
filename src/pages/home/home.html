@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home
+    </ion-title>
+
+    <ion-icon name="ios-add-circle-outline" (click)="aggiungiPrestito()"></ion-icon>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Oggetti Prestati</ion-list-header>
+    <ion-item *ngFor="let itemOggetto of listaOggettiPrestati">
+
+      <div class="informazioniItem" (click)="vaiDettaglioPrestito(itemOggetto)">
+        <ion-avatar item-start>
+          <img src="{{itemOggetto.fotografia}}">
+        </ion-avatar>
+
+        <div class="divTesto">
+          <div class="divTitolo">{{itemOggetto.nome}}</div>
+          <div class="divSottotitolo">prestato a {{itemOggetto.aChi}}, in data {{itemOggetto.quando | date: 'EEEE, dd/MM/yyyy'}}</div>
+        </div>
+      </div>
+      <!-- C'è anche item-sliding se c'è tempo che puoi provare a fare -->
+      <div item-end class="containerBottoni">
+        <button ion-button color="danger" *ngIf="!itemOggetto.ritornato" (click)="cambiaStatoRestituzione(itemOggetto)">
+          <ion-icon name="ios-remove"></ion-icon>
+        </button>
+        <button ion-button color="secondary" *ngIf="itemOggetto.ritornato" (click)="cambiaStatoRestituzione(itemOggetto)">
+          <ion-icon name="ios-add"></ion-icon>
+        </button>
+        <ion-icon name="ios-close-circle" color="dark" (click)="eliminaItem(itemOggetto)"></ion-icon>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

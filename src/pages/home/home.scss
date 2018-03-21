@@ -1,0 +1,45 @@
+page-home {
+  ion-navbar {
+    div {
+      display: flex;
+      flex-direction: row;
+    }
+    ion-title {
+      text-align: center;
+    }
+
+    ion-icon {
+      font-size: 26px;
+      color: #478aff;
+    }
+  }
+
+  .informazioniItem {
+    display: flex;
+
+    .divTesto {
+      display: flex;
+      flex-direction: column;
+
+      .divTitolo {
+        font-size: 1.4rem;
+        font-weight: bolder;
+      }
+
+      .divSottotitolo {
+        font-size: 1rem;
+        color: rgb(77, 75, 75);
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.containerBottoni {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  button {
+  }
+}

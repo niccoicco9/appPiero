@@ -1,0 +1,27 @@
+page-dettaglio-prestito {
+
+    .containerImmagine{
+        background: whitesmoke;
+        width: 90vw;
+        height: 40vh;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center; 
+
+        ion-icon{
+            align-self: center;
+            color: #478aff;
+            font-size: 40px;
+        }
+    }
+
+    .togglePrestato{
+        margin-top: 30px;
+    }
+
+    ion-input, ion-datetime{
+        font-weight: bolder;
+        color: #222;
+    }
+
+}

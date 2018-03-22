@@ -50,6 +50,9 @@ export class HomePage {
   eliminaItem(oggetto: OggettoPrestato) {
     this.serviceObjectOnLoan.deleteOggettoPrestato(oggetto.id);
     this.aggiornaDati();
+    this.listaOggettiPrestati.forEach((oggetto, index) => {
+      oggetto.id = index;
+    });
   }
 
   aggiungiPrestito() {

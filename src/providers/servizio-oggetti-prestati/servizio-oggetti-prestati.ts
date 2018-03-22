@@ -40,6 +40,7 @@ export class ServizioOggettiPrestatiProvider {
 
 
   aggiungiPrestito(oggetto: OggettoPrestato){
+    oggetto.id = this.oggettiPrestati.length;
     this.oggettiPrestati.push(oggetto);
     this.aggiornaStorage('Inserimento avvenuto', 'Inserimento fallito');
   }

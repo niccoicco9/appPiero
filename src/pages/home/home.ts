@@ -51,7 +51,7 @@ export class HomePage {
     this.serviceObjectOnLoan.deleteOggettoPrestato(oggetto.id);
     this.aggiornaDati();
     this.listaOggettiPrestati.forEach((oggetto, index) => {
-      oggetto.id = index;
+      this.listaOggettiPrestati[index].id = index;
     });
   }
 

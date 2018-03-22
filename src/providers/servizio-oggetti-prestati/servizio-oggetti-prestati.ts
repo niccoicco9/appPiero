@@ -36,7 +36,7 @@ export class ServizioOggettiPrestatiProvider {
     }
     this.aggiornaStorage('Eliminazione effettuata', 'Impossibile eliminare');
     this.oggettiPrestati.forEach((oggetto, index) => {
-      oggetto.id = index;
+      this.oggettiPrestati[index].id = index;
     });
   }
 
